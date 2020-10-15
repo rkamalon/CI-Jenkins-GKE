@@ -4,7 +4,7 @@ pipeline {
         PROJECT_ID = 'vmware-training-oct-2020'
         CLUSTER_NAME = 'vmware-cluster-1'
         LOCATION = 'us-central1-c'
-        CREDENTIALS_ID = 'gke'
+        CREDENTIALS_ID = 'GKE-Jenkin'
     }
     stages {
         stage("Checkout code") {
@@ -22,7 +22,7 @@ pipeline {
         stage("Push image") {
             steps {
                 script {
-                    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
+                    docker.withRegistry('https://registry.hub.docker.com', 'Docker-Jenkin') {
                             myapp.push("latest")
                             myapp.push("${env.BUILD_ID}")
                     }
