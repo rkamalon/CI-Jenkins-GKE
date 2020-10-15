@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         PROJECT_ID = 'vmware-training-oct-2020'
-        CLUSTER_NAME = 'vmware-cluster-1'
+        CLUSTER_NAME = 'cluster-1'
         LOCATION = 'us-central1-c'
         CREDENTIALS_ID = 'GKE-Jenkin'
     }
